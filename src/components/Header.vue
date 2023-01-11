@@ -6,9 +6,9 @@
       </div>
       <div class="divider"></div>
       <div>
-        <router-link to="/st/">
+        <NuxtLink to="/st/">
           <h2 @click="trocaDeNome('Página Inicial')">Substituição Tributária</h2>
-        </router-link>
+        </NuxtLink>
       </div>
     </div>
   </header>
@@ -23,9 +23,9 @@ export default {
     abrirLink(link) {
       window.open(link, "_blank")
     },
-    /*trocaDeNome(name) {
+    trocaDeNome(name) {
       this.$root.$refs.Layout.trocaDeNome(name)
-    }*/
+    }
   }
 }
 </script>

@@ -37,7 +37,6 @@ export default {
         if(result){
             this.estadoNome  = result.estado
         }
-        
         await this.$store.dispatch('simulador/getCategoriaUf',formListaMercadoriaEstado.uf) 
     }
 

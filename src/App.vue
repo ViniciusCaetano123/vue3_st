@@ -34,7 +34,7 @@
                     <span  class="txtMenu">Consulta por NCM</span>
             </div>
             </a>-->
-          <a  @click="irParaPage('st-mercadoria')">
+          <a  @click="irParaPage('st-mercadoria6')">
           <div :class="{bloco:true,blocoClick: this.txtAtual == 'Lista de Mercadorias'}"  @click="trocaDeNome('Lista de Mercadorias','https://www.lefisc.com.br/st/images/listaMercadoria.svg')">
                   <img src="https://www.lefisc.com.br/st/images/listaMercadoria.svg"  v-if="this.txtAtual != 'Lista de Mercadorias'">
                   <img src="https://www.lefisc.com.br/st/images/listaMercadoriaB.svg"  v-else>

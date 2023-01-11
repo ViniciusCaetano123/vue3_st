@@ -49,6 +49,7 @@
                 this.form.categoria = '0'
                 this.estadoSelected = true
             }catch(e){
+                this.estadoSelected = true
             }
         },
         async buscar(){
@@ -58,6 +59,7 @@
                 localStorage.setItem('formListaMercadoria',JSON.stringify(this.form))
                 this.loading = true                
             }catch(e){
+                this.estadoSelected = true
             }
           }
       },  

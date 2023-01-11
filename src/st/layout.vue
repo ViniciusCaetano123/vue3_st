@@ -55,8 +55,8 @@
                 <span  class="txtMenu">Simulador de Cálculos</span>
             </div>
             </router-link>
-            <router-link  @click="trocaDeNome('Legislação da ST')">
-                  <div :class="{bloco:true,blocoClick: this.txtAtual == 'Legislação da ST'}"  @click="trocaDeNome('Legislação da ST','https://www.lefisc.com.br/st/images/legislacao.svg')">
+            <router-link >
+                  <div :class="{bloco:true,blocoClick: this.txtAtual == 'Legislação da ST'}"  @click="trocaDeNome('Legislação da ST','https://www.lefisc.com.br/st/images/legislacao.svg','stlegislacao')">
                 <img src="https://www.lefisc.com.br/st/images/legislacao.svg"   v-if="this.txtAtual != 'Legislação da ST'">
                 <img src="https://www.lefisc.com.br/st/images/legislacaoB.svg"  v-else>
                 <span  class="txtMenu">Legislação da ST</span>
@@ -168,6 +168,9 @@
           };
         },
         methods: {
+          irParaMenuSelecionado(){
+
+          },
           irParaLinkExterno(link){
             window.open(link,'_blank')
           },
@@ -181,9 +184,10 @@
               }          
             }
           },
-          trocaDeNome(nome,img){
+          trocaDeNome(nome,img,name){
             this.txtAtual = nome
             this.img = img
+            this.$router.push({name:name})
           },
           handleOpen(key, keyPath) {
             console.log(key, keyPath);
